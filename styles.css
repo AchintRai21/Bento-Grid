@@ -1,0 +1,404 @@
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	width: 100vw;
+}
+
+@font-face {
+	font-family: 'custom-font1-regular';
+	src: url(C:\Users\achin\Desktop\Bento-grid\bento-grid-main\assets\fonts\static\DMSans-Regular.ttf);
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'custom-font2-italic';
+	src: url(../assets/fonts/static/DMSans-MediumItalic.ttf);
+	font-weight: normal;
+	font-style: italic;
+
+}
+
+@font-face {
+	font-family: 'custom-font3-bold';
+	src: url(../assets/fonts/static/DMSans-Medium.ttf);
+	font-weight: bold;
+	font-style: normal;
+}
+
+:root {
+    --top-left-card: hsl(34, 100%, 90%);
+    --top-center-card: hsl(244, 38%, 16%);
+    --top-right-card: hsl(277, 64%, 81%);
+    --middle-left-card: hsl(0, 0%, 96%);
+	--middle-center-card: hsl(42, 100%, 80%);
+	--middle-right-card: hsl(42, 100%, 80%);
+	--bottom-left-card: hsl(42, 100%, 80%);
+	--bottom-center-card: hsl(0, 0%, 100%);
+	--bottom-right-card: hsl(277, 64%, 61%);
+
+	--text-color1: black;
+	--text-color2: hsl(277, 64%, 61%);
+	--text-color3: white;
+	--text-color4: yellow;
+	
+	--regular-text: 'custom-font1-regular', sans-serif;
+    --italic-text: 'custom-font2-italic', sans-serif;
+	--bold-text: 'custom-font3-bold', sans-serif;
+
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.regular-text {
+	font-family: var(--regular-text);
+}
+
+.italic-text {
+	font-family: var(--italic-text);
+}
+
+.bold-text {
+	font-family: var(--bold-text);
+}
+
+.top-left-card {
+	background-color: var(--top-left-card);
+}
+
+.top-center-card {
+	background-color: var(--top-center-card);
+}
+
+.top-right-card {
+	background-color: var(--top-right-card);
+}
+
+.middle-left-card {
+	background-color: var(--middle-left-card);
+}
+
+.middle-center-card {
+	background-color: var(--middle-center-card);
+}
+
+.middle-right-card {
+	background-color: var(--middle-right-card);
+}
+
+.bottom-left-card {
+	background-color: var(--bottom-left-card);
+}
+
+.bottom-center-card {
+	background-color: var(--bottom-center-card);
+}
+
+.bottom-right-card {
+	background-color: var(--bottom-right-card);
+}
+
+.text-color1 {
+	color: var(--text-color1);
+}
+
+.text-color2 {
+	color: var(--text-color2);
+}
+
+.text-color3 {
+	color: var(--text-color3);
+}
+
+.text-color4 {
+	color: var(--text-color4);
+}
+
+.normal-text {
+	font-family: sans-serif;
+}
+
+.bento-container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	gap: 1em;
+	width: 80vw;
+	height: 90vh;
+	margin: 5% auto 5%;
+}
+
+.body1 {
+	display: grid;
+	grid-column: 1 / 2;
+	grid-row: 1 / 4;
+	grid-template-rows: repeat(2, 1fr);
+	gap: 1rem;
+}
+
+.body2 {
+	display: grid; 
+	grid-template-columns: repeat(2, 1fr);
+	grid-column: 2 / 4;
+	grid-row: 1 / 3;
+	grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+}
+
+.body3 {
+	display: grid;
+	grid-column: 2 / 5;
+	gap: 1rem;
+	grid-row: 3 / 4;
+	grid-template-columns: repeat(3, 1fr);
+	overflow: hidden;
+}
+
+.body4 {
+	display: grid;
+	grid-column: 4 / 5;
+	grid-row: 1 / 3;
+}
+
+/* first card */
+
+.create-post {
+	height: 100%;
+	border-radius: 1em;
+}
+
+.regular-text {
+	display: block;
+	position: relative;
+	top: 9%;
+	left: 28%;
+	font-size: clamp(1.2rem, 2vw, 2.5rem);
+	line-height: 1em;
+	width: 55%;
+	height: auto;
+}
+
+.pic-create-post {
+  width: 49%;     
+  height: 18%;       
+  display: block;
+  margin: auto;
+  position: relative;
+  top: 10%;
+}
+
+/* second card */
+
+.using-ai {
+	height: 100%;
+	border-radius: 1em;
+}
+
+.ai-chat-box {
+	display: block;
+	width: 85%;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: 11%;
+	left: 4%;
+}
+
+.ai-box {
+	display: block;
+	position: relative;
+	top: 1%;
+	left: 8%;
+	height: 10%;
+}
+
+/* third card */
+
+.social-media {
+	display: grid;
+	grid-column: 1 / 3;
+	grid-row: 1 / 2;
+	height: auto;
+	border-radius: 1em;
+}
+
+.social-media-paragraph {
+	display: inline;
+	height: 15%;
+	position: relative;
+	top: 10%;
+	left: 3%;
+	font-size: clamp(1.2rem, 3.5em, 10em);
+	text-align: center;
+}
+
+.five-stars {
+	width: auto;
+	display: inline;
+	width: 80%;
+	height: auto;
+	position: relative;
+	top: 13%;
+	left: 10%;
+}
+
+.social-media-star-comment {
+	font-size: clamp(0.8rem, 1.5vw, 1.5rem);
+	display: block;
+	position: relative;
+	top: 9%;
+}
+
+/* fourth card */
+
+.accounts {
+	display: grid;
+	grid-column: 1 / 2;
+	grid-row: 2 / 3;
+	border-radius: 1em;
+}
+
+.social-media-accounts {
+	display: block;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: 10%;
+}
+
+.accounts-text {
+	display: block;
+	height: auto;
+	width: 70%;
+	font-size: clamp(1rem, 2vw, 2rem);
+	position: relative;
+	top: 10%;
+	left: 5%;
+}
+
+/* fifth card */
+
+.schedule {
+	grid-column: 2 / 3;
+	grid-row: 2 / 3;
+	border-radius: 1em;
+	overflow: hidden;
+}
+
+.schedule-paragraph {
+	display: block;
+	height: auto;
+	font-size: clamp(1rem, 2vw, 2rem);
+	position: relative;
+	top: 1%;
+	left: 5%;
+}
+
+.schedule-picture {
+	display: inline;
+	width: 80%;
+	position: relative;
+	top: 2%;
+	left: 10%;
+}
+
+/* sixth card */
+
+.audience {
+	grid-column: 1 / 2;
+	height: auto;
+	border-radius: 1em;
+}
+
+.number-text {
+	font-size: clamp(2rem, 4vw, 5rem);
+	display: inline;
+	position: relative;
+	top: 3%;
+	left: 5%;
+}
+
+.audience-growth {
+	display: block;
+	position: relative;
+	left: 5%;
+	margin-top: 10%;
+	margin-bottom: 6%;
+}
+
+.meta-avatar {
+	display: block;
+	width: 85%;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: 5%;
+}
+
+/* seventh card */
+
+.followers {
+	grid-column: 2 / 4;
+	border-radius: 1em;
+	height: auto;
+}
+
+
+.followers-text {
+	font-size: clamp(1rem, 2.5vw, 4rem);
+	display: block;
+	position: relative;
+	width: 50%;
+	position: relative;
+	top: 5%;
+	left: 49%;
+}
+
+.numbers-followers {
+	display: block;
+	position: relative;
+	left: 3%;
+	top: -40.8%;
+	width: 45%;
+}
+
+/* eighth card */
+
+.optimize {
+	grid-column: -4 / 2;
+	border-radius: 1em;
+	overflow: hidden;
+}
+
+.stats-image {
+	width: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	left: 20%;
+	top: -6%;
+	height: 66%;
+}
+
+.last-text {
+	display: block;
+	position: relative;
+	width: 80%;
+	top: -2%;
+	left: 21%;
+	font-size: clamp(1.2rem, 2vw, 2.5rem);
+}
+
+.last-paragraph {
+	display: block;
+	position: relative;
+	width: 68%;
+	top: -8%;
+	left: 20%;
+	font-size: clamp(0.8rem, 1.2vw, 1.5rem);
+}
